@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "dist",
+    "rootDir": "src",
+    "module": "esnext",
+    "target": "es5",
+    "lib": [
+      "es6",
+    ],
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": false,
+    "noImplicitAny": false,
+    "importHelpers": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": false,
+    "preserveSymlinks": true,
+    "alwaysStrict": false,
+    "strictFunctionTypes": false,
+  },
+  "include": [
+    "./lib/*",
+    "./common/*",
+    "./src/*",
+  ],
+}

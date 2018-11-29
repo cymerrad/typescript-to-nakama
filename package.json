@@ -1,0 +1,25 @@
+{
+  "name": "typescript-to-nakama",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "This is a minimal project that can successfully transpile to Lua code accepted by Nakama server.",
+  "license": "MIT",
+  "scripts": {
+    "test": "./scripts/createDummyNodeModules.sh; ./scripts/prependWithNakamaImports.sh jest",
+    "build": "tstl -p ./tsconfig.json --lt=5.1 --luaLibImport=require && cp -u src/*.lua dist && cp -u -r src/vendor dist",
+    "serve": "nakama --runtime.path dist --logger.level debug",
+    "start": "test && build && serve"
+  },
+  "dependencies": {
+    "@types/diff": "^3.5.1",
+    "@types/jest": "^23.3.5",
+    "@types/mock-require": "^2.0.0",
+    "@types/node": "^10.12.9",
+    "@types/uuid": "^3.4.4",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4",
+    "typescript": "^3.1.6",
+    "typescript-to-lua": "^0.11.0",
+    "uuid": "^3.3.2"
+  }
+}

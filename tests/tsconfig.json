@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+        "strictNullChecks": true,
+        "lib": [
+            "es6",
+            "dom",
+        ],
+        "rootDir": "..",
+        "types": [
+            "jest",
+            "node"
+        ],
+    },
+    "include": [
+        "../lib/*",
+        "./*",
+    ]
+}
